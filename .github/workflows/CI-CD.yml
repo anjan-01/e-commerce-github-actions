@@ -12,20 +12,20 @@ jobs:
     - name: clone the latest code
       run: echo"Code Clonned"
   build: 
-    need: code
+    needs: code
     runs-on: ubuntu-latest
     steps: 
     - name: Build the clonned code using Docker
       run: echo"Code Builded"
   test:
-    need: build
+    needs: build
     runs-on: ubantu-latest
     steps: 
     - name: Test the latest code build
       run: echo"Code Test Successful"
   
   deploy: 
-    need: [code,build,test]
+    needs: [code,build,test]
     runs-on: ubantu-latest
     steps: 
       - name: Deploy the Test code
