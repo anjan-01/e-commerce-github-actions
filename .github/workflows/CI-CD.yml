@@ -1,0 +1,33 @@
+#Goal: to learn CI-CD piepline(Test dummy)
+name: CI-CD piepline demo
+
+on: 
+ push: 
+
+ jobs:
+ code: 
+  runs-on: ubuntu-latest
+  steps: 
+  -name: clone the latest code
+  run: echo"Code Clonned"
+
+ build: 
+  need: code
+  runs-on: ubantu-latest
+  steps: 
+  -name: Build the clonned code using Docker
+  run: echo"Code Builded"
+   
+ test:
+  need: build
+  runs-on: ubantu-latest
+  steps: 
+  -name: Test the latest code build
+  run: echo"Code Test Successful"
+
+ deploy:
+  need: [code,build,test]
+  runs-on: ubantu-latest
+  steps: 
+  -name: Deploy the Test code
+  run: echo"Deployment completed"
