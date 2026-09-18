@@ -3,29 +3,29 @@ name: CI-CD piepline demo
 
 on: 
  push: 
-
  jobs:
- code: 
+
+code: 
   runs-on: ubuntu-latest
   steps: 
   -name: clone the latest code
   run: echo"Code Clonned"
 
- build: 
+build: 
   need: code
   runs-on: ubantu-latest
   steps: 
   -name: Build the clonned code using Docker
   run: echo"Code Builded"
-   
- test:
+
+test:
   need: build
-  runs-on: ubantu-latest
-  steps: 
+   runs-on: ubantu-latest
+steps: 
   -name: Test the latest code build
   run: echo"Code Test Successful"
 
- deploy:
+deploy:
   need: [code,build,test]
   runs-on: ubantu-latest
   steps: 
