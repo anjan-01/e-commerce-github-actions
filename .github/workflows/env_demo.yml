@@ -3,7 +3,7 @@
 name: Show Env variables
 
 on: 
- workflow_dispatch:
+ push: 
 
 env:
   NAME: Gunjan
@@ -11,5 +11,5 @@ jobs:
   show_env:
     runs-on: ubuntu-latest
     steps:
-      - name: show plane text 
+      - name: Show plain text env
         run: echo "My name is ${(env.NAME)}"
