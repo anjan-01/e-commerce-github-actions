@@ -11,5 +11,5 @@ jobs:
   show_env:
     runs-on: ubuntu-latest
     steps:
-      - name: show plane text env
+      - name: show plane text 
         run: echo "My name is ${(env.NAME)}"
