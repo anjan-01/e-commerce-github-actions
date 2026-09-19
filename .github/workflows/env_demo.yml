@@ -5,12 +5,12 @@ name: Show Env variables
 on: 
  workflow_dispatch: 
   inputs: 
-    environment: 
-     description: Select the Env
-     required: true
-     default: 'dev'
-       type: choice
-       options:
+   environment: 
+    description: Select the Envirnonment you want
+    required: true
+    default: 'dev'
+    type: choice
+    options:
         - dev
         - stagging
         - prod
