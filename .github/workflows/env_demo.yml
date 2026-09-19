@@ -1,0 +1,15 @@
+#Goal: to learn secret and print env name variable
+
+name: Show Env variables
+
+on: 
+ workflow_dispatch:
+
+env:
+  NAME: Gunjan
+jobs:
+  show_env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show plane text env:
+        run: echo "My name is ${(env.NAME)}"
