@@ -5,7 +5,7 @@ name: Show Env variables
 on: 
  workflow_dispatch: 
   inputs: 
-    environments: 
+    environment: 
      description: Select the Env
      required: true
      default: 'dev'
