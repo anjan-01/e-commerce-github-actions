@@ -4,6 +4,16 @@ name: Show Env variables
 
 on: 
  workflow_dispatch: 
+  inputs:
+    environments: 
+     description: Select the Env
+     required: true
+     default: 'dev'
+       type: choice
+       options:
+        - dev
+        - stagging
+        - prod
 
 env:
   NAME: Gunjan
