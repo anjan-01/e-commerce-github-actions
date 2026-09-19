@@ -14,6 +14,6 @@ jobs:
       - name: Show plain text env
         run: echo "My name is ${{env.NAME}}"
       - name: Show Secret
-        run: echo "My fun secret is ${{secret.BHUMI_SECRET}}"
+        run: echo "My fun secret is ${{secrets.BHUMI_SECRET}}"
       - name: Show env variables
         run: echo "MY dockerhub name is ${{vars.GAR_DOCKERHUB}}"
